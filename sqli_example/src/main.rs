@@ -22,7 +22,7 @@ async fn login_form() -> impl Responder {
 #[post("/login")]
 async fn handle_login(form: web::Form<LoginCredentials>) -> Result<HttpResponse, Error> {
     let (client, connection) = tokio_postgres::connect(
-        "host=localhost user=postgres password=verdad4507 dbname=users_sqli",
+        "host=localhost user=postgres password=postgres dbname=users_sqli",
         NoTls,
     )
     .await
