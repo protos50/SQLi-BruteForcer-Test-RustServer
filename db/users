@@ -1,0 +1,15 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Insertar la familia
+INSERT INTO users (username, password) VALUES ('protos50', 'protos50') RETURNING id;
+INSERT INTO users (username, password) VALUES ('papitas', 'pure') RETURNING id;
+INSERT INTO users (username, password) VALUES ('morron', 'rojo') RETURNING id;
+INSERT INTO users (username, password) VALUES ('morroncito', 'verde') RETURNING id;
+INSERT INTO users (username, password) VALUES ('guiso', 'dearroz') RETURNING id;
+INSERT INTO users (username, password) VALUES ('admin', 'admin') RETURNING Id;
+
+SELECT * FROM users;
