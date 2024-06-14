@@ -55,9 +55,25 @@ CREATE TABLE users (
 -- Insert users 
 INSERT INTO users (username, password) VALUES ('protos50', 'protos50') RETURNING id;
 INSERT INTO users (username, password) VALUES ('papitas', 'pure') RETURNING id;
-INSERT INTO users (username, password) VALUES ('admin', 'password123') RETURNING;
-INSERT INTO users (username, password) VALUES ('admin', 'admin') RETURNING;
+INSERT INTO users (username, password) VALUES ('admin', 'admin') RETURNING id;
 ```
+
+3. Access the login page:
+
+    - Open your web browser and navigate to:
+
+        http://localhost:8080/login
+
+    - You can test the SQL injection vulnerability by entering the following in the username or password field:
+
+        ```sql
+        ' OR '1'='1
+        ```
+    - It is possible to attempt other SQL injections, such as:
+  
+      ```sql
+        '; DROP TABLE users;--'
+      ```
 
 ### Running or Modifying the Code (Optional)
 
@@ -83,7 +99,7 @@ cargo run
 
 ## Brute Forcer
 
-This project includes a modified version of the `FJZ-Bruteforcer v1.0`, originally intended for educational purposes such as Portswigger labs. It has been adapted to test SQL injection vulnerabilities through enumeration on a local Rust server.
+This project includes a modified version of the [FJZ-Bruteforcer v1.0](https://github.com/protos50/brute-force-portswigger-login), originally intended for educational purposes such as Portswigger labs. It has been adapted to test SQL injection vulnerabilities through enumeration on a local Rust server.
 
 ### Features
 
@@ -143,10 +159,6 @@ python main_bf.py
 5. Press '5' to save found credentials to a JSON file.
 
 6. Press '6' to exit the script.
-
-#### Important Note
-
-Ensure responsible use of this tool and comply with all legal and ethical guidelines when conducting security assessments.
 
 ## Contributing
 
