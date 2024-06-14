@@ -2,7 +2,9 @@
 
 ## Description
 
-`enum_sqli_test` is a test application designed to demonstrate potential SQL injection vulnerabilities through enumeration on a local Rust server. This project includes a server that simulates both a vulnerable and a secure application for educational and security testing purposes.
+`enum_sqli_test` is a test application designed to demonstrate potential SQL injection vulnerabilities through enumeration on a local Rust server. This project includes a server that simulates both a vulnerable and a secure application for educational and security testing purposes. 
+
+It also includes a Python bruteforcer that exploits vulnerabilities through enumeration.
 
 ## Features
 
@@ -96,6 +98,9 @@ cargo build
 ```sh
 cargo run
 ```
+## Code Details
+
+The main.rs file contains both the secure and insecure login handling code. The secure code is active by default, while the insecure code is commented out. You can switch between them by commenting/uncommenting the respective sections.
 
 ## Brute Forcer
 
@@ -106,10 +111,6 @@ This project includes a modified version of the [FJZ-Bruteforcer v1.0](https://g
 - Multithreaded username validation.
 - Multithreaded brute-force password cracking.
 - Saves discovered credentials to a JSON file.
-
-### Disclaimer
-
-Use this tool responsibly and only on targets where you have explicit authorization.
 
 ### Understanding the Brute Forcer
 
@@ -159,6 +160,10 @@ python main_bf.py
 5. Press '5' to save found credentials to a JSON file.
 
 6. Press '6' to exit the script.
+
+### Disclaimer
+
+Use this tool responsibly and only on targets where you have explicit authorization.
 
 ## Contributing
 
