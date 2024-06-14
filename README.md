@@ -55,10 +55,8 @@ CREATE TABLE users (
 -- Insert users 
 INSERT INTO users (username, password) VALUES ('protos50', 'protos50') RETURNING id;
 INSERT INTO users (username, password) VALUES ('papitas', 'pure') RETURNING id;
-INSERT INTO users (username, password) VALUES ('morron', 'rojo') RETURNING id;
-INSERT INTO users (username, password) VALUES ('morroncito', 'verde') RETURNING id;
-INSERT INTO users (username, password) VALUES ('guiso', 'dearroz') RETURNING id;
-INSERT INTO users (username, password) VALUES ('admin', 'password123');
+INSERT INTO users (username, password) VALUES ('admin', 'password123') RETURNING;
+INSERT INTO users (username, password) VALUES ('admin', 'admin') RETURNING;
 ```
 
 ### Running or Modifying the Code (Optional)
@@ -85,16 +83,73 @@ cargo run
 
 ## Brute Forcer
 
-Navigate to the brute forcer directory:
+This project includes a modified version of the `FJZ-Bruteforcer v1.0`, originally intended for educational purposes such as Portswigger labs. It has been adapted to test SQL injection vulnerabilities through enumeration on a local Rust server.
+
+### Features
+
+- Multithreaded username validation.
+- Multithreaded brute-force password cracking.
+- Saves discovered credentials to a JSON file.
+
+### Disclaimer
+
+Use this tool responsibly and only on targets where you have explicit authorization.
+
+### Understanding the Brute Forcer
+
+The Brute Forcer included in this project is designed to find valid usernames and passwords from pre-supplied files for a given login form vulnerable to SQL injection.
+
+### Instructions
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/your_username/enum_sqli_test.git
+   cd enum_sqli_test/brute_forcer
+
+### Install dependencies
+
+Ensure you have Python installed. Install necessary Python dependencies:
 
 ```sh
-cd ../brute_forcer
+pip install requests colorama
 ```
-Run the brute forcer:
+### Running the Brute Forcer
+
+Execute the script to begin testing for SQL injection vulnerabilities:
 
 ```sh
 python main_bf.py
 ```
+
+or
+
+```sh
+python main_bf.py
+```
+
+### Follow the menu prompts provided by the Brute Forcer:
+
+1. Press '1' to provide the login URL or change it. If using the default localhost and port, the URL is:
+
+    `http://localhost:8080/login`
+
+2. Press '2' to find valid usernames.
+
+3. Press '3' to perform the brute-force attack.
+
+4. Press '4' to view the results.
+
+5. Press '5' to save found credentials to a JSON file.
+
+6. Press '6' to exit the script.
+
+#### Important Note
+
+Before initiating a brute-force attack, it's crucial to enumerate valid usernames using the provided tools. This step is essential for the brute-force attack, which requires a valid username to attempt to crack the associated password.
+
+Ensure responsible use of this tool and comply with all legal and ethical guidelines when conducting security assessments.
+
 ## Contributing
 
 Contributions are welcome. If you wish to contribute, please follow these steps:
