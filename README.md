@@ -10,7 +10,7 @@ It also includes a Python bruteforcer that exploits vulnerabilities through enum
 
 - **SQL Injection Demonstration**: Includes examples of how SQL injection vulnerabilities can be exploited and how to prevent them.
 - **Rust Server**: Implementation of a server in Rust using Actix-web.
-- **Brute Forcer**: A tool for brute-forcing usernames and passwords.
+- **Brute Forcer**: A python-coded tool for brute-forcing usernames and passwords.
 
 ## Installation
 
