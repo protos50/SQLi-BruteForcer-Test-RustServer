@@ -1,8 +1,8 @@
-# enum_sqli_test
+#  SQLi and BruteForcer Test in a Rust Server
 
 ## Description
 
-`enum_sqli_test` is a test application designed to demonstrate potential SQL injection vulnerabilities through enumeration on a local Rust server. This project includes a server that simulates both a vulnerable and a secure application for educational and security testing purposes. 
+` SQLi-BruteForcer-Test-RustServer` is a test application designed to demonstrate potential SQL injection vulnerabilities through enumeration on a local Rust server. This project includes a server that simulates both a vulnerable and a secure application for educational and security testing purposes. 
 
 It also includes a Python bruteforcer that exploits vulnerabilities through enumeration.
 
