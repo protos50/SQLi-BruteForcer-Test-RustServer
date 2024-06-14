@@ -117,48 +117,42 @@ The Brute Forcer included in this project is designed to find valid usernames an
 
 ### Instructions
 
-1. **Clone the repository:**
+1. Install dependencies
 
-   ```sh
-   git clone https://github.com/your_username/enum_sqli_test.git
-   cd enum_sqli_test/brute_forcer
+    Ensure you have Python installed. Install necessary Python dependencies:
 
-### Install dependencies
+    ```sh
+    pip install requests colorama
+    ```
+2. Running the Brute Forcer
 
-Ensure you have Python installed. Install necessary Python dependencies:
+    Execute the script to begin testing for SQL injection vulnerabilities:
 
-```sh
-pip install requests colorama
-```
-### Running the Brute Forcer
+    ```sh
+    python main_bf.py
+    ```
 
-Execute the script to begin testing for SQL injection vulnerabilities:
+    or
 
-```sh
-python main_bf.py
-```
+    ```sh
+    python main_bf.py
+    ```
 
-or
+3. Follow the menu prompts provided by the Brute Forcer:
 
-```sh
-python main_bf.py
-```
+    1. Press '1' to provide the login URL or change it. If using the default localhost and port, the URL is:
 
-### Follow the menu prompts provided by the Brute Forcer:
+        `http://localhost:8080/login`
 
-1. Press '1' to provide the login URL or change it. If using the default localhost and port, the URL is:
+    2. Press '2' to find valid usernames.
 
-    `http://localhost:8080/login`
+    3. Press '3' to perform the brute-force attack.
 
-2. Press '2' to find valid usernames.
+    4. Press '4' to view the results.
 
-3. Press '3' to perform the brute-force attack.
+    5. Press '5' to save found credentials to a JSON file.
 
-4. Press '4' to view the results.
-
-5. Press '5' to save found credentials to a JSON file.
-
-6. Press '6' to exit the script.
+    6. Press '6' to exit the script.
 
 ### Disclaimer
 
@@ -166,13 +160,7 @@ Use this tool responsibly and only on targets where you have explicit authorizat
 
 ## Contributing
 
-Contributions are welcome. If you wish to contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a branch for your feature (`git checkout -b feature/new-feature`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push your changes to your branch (`git push origin feature/new-feature`).
-5. Open a Pull Request.
+Contributions are welcome. If you wish to contribute.
 
 ## Feedback
 
