@@ -30,12 +30,12 @@ You can use the compiled executables found in the release directory:
 Run the appropriate script to start the server:
 
 ```sh
-./release/run_Safe_sqli.sh
+./sqli_example/release/run_Safe_sqli.sh
 ```
 or
 
 ```sh
-./release/run_Unsafe_sqli.sh
+./sqli_example/release/run_Unsafe_sqli.sh
 ```
 
 The server will start at http://127.0.0.1:8080.
@@ -84,8 +84,7 @@ If you want to execute or modify the code yourself, follow these steps:
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/your_username/enum_sqli_test.git
-cd enum_sqli_test/sqli_example
+git clone https://github.com/protos50/SQLi-BruteForcer-Test-RustServer.git
 ```
 
 2. Install Rust dependencies (if you want to compile the code yourself):
