@@ -146,8 +146,6 @@ python main_bf.py
 
 #### Important Note
 
-Before initiating a brute-force attack, it's crucial to enumerate valid usernames using the provided tools. This step is essential for the brute-force attack, which requires a valid username to attempt to crack the associated password.
-
 Ensure responsible use of this tool and comply with all legal and ethical guidelines when conducting security assessments.
 
 ## Contributing
